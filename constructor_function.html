@@ -7,21 +7,17 @@
 <body>
 <script>
     <!--    create object with class-->
-    function Person() { // class is blueprint
-        this.firstName = ''
-        this.lastName = ''
+    function Person(firstName, lastName) { // class is blueprint
+        this.firstName = firstName
+        this.lastName = lastName
         this.sayHello = function(name) { // create function in constructor function like a create function object
             return `Hello ${name}, my name is ${this.firstName} ${this.lastName}`
         }
     }
 
     // for call constructor function
-    const rahman = new Person()
-    rahman.firstName = 'Abdurahman'
-    rahman.lastName = 'Argoebie'
-    const rizal = new Person()
-    rizal.firstName = 'Rizal'
-    rizal.lastName = 'Rizal'
+    const rahman = new Person('Abdurahman','Argoebie')
+    const rizal = new Person('Rizal','Pahlawan')
 
     console.info(rahman)
     console.info(rizal)

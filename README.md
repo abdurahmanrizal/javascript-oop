@@ -4,4 +4,6 @@
 
 - Constructor Function
 - Property in Constructor Function
-- Function in Constuctor Function
+- Function in Constructor Function
+- Parameter in Constructor Function
+- 
