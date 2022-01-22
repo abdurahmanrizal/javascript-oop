@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Function in OOP</title>
+</head>
+<body>
+<script>
+    <!--    create object with class-->
+    function Person() { // class is blueprint
+        this.firstName = ''
+        this.lastName = ''
+        this.sayHello = function(name) { // create function in constructor function like a create function object
+            return `Hello ${name}, my name is ${this.firstName} ${this.lastName}`
+        }
+    }
+
+    // for call constructor function
+    const rahman = new Person()
+    rahman.firstName = 'Abdurahman'
+    rahman.lastName = 'Argoebie'
+    const rizal = new Person()
+    rizal.firstName = 'Rizal'
+    rizal.lastName = 'Rizal'
+
+    console.info(rahman)
+    console.info(rizal)
+    console.info(rahman.sayHello('Dya'))
+    console.info(rizal.sayHello('Putri'))
+</script>
+</body>
+</html>
