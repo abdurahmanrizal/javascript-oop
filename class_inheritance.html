@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Inheritance</title>
+</head>
+<body>
+<script>
+    class Employee {
+        sayHello(name) {
+            return `Hello ${name}, this is employee is name ${this.name}`
+        }
+    }
+
+    class Manager extends Employee {
+
+        sayHello(name) {
+            return `Hello ${name}, this is manager is name ${this.name}`
+        }
+    }
+
+    const budi = new Employee('budi')
+    const rudi = new Manager('rudi')
+
+    console.info(budi.sayHello('Rahman'))
+    console.info(rudi.sayHello('Jack'))
+</script>
+</body>
+</html>

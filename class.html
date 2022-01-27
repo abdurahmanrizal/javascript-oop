@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class</title>
+</head>
+<body>
+<script>
+    class Person {
+        // add property in class function
+        constructor(name) {
+            this.name = name
+        //    create function can in instance object but not recommend
+        //     this.sayHello = function(name) {
+        //         return `Hello ${name}, my name is ${this.name}`
+        //     }
+        }
+
+        //    create function recommend in prototype not in instance object
+        sayHello(name) {
+            return `Hello ${name}, my name is ${this.name}`
+        }
+    }
+
+    const abdurahman = new Person('Abdurahman')
+    console.info(abdurahman)
+    console.info(abdurahman.name)
+    console.info(abdurahman.sayHello('Jack'))
+</script>
+</body>
+</html>
