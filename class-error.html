@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class: Error</title>
+</head>
+<body>
+<script>
+<!--    create own class error-->
+    class ValidationError extends Error{
+        constructor(message,fields) {
+            super(message);
+            this.fields = fields
+        }
+    }
+    class MathUtil {
+        static sum(...numbers) {
+            if (numbers.length == 0) {
+                throw new ValidationError('Total parameter harus lebih dari 0', 'numbers')
+            }
+
+            let total = 0
+            for (const number of numbers) {
+                total += number
+            }
+            return total
+        }
+    }
+
+    try {
+        console.info(MathUtil.sum())
+        console.info('Abdurahman')
+    } catch (error) {
+        if(error instanceof ValidationError) {
+            console.error(`Terjadi kesalahan pada field ${error.fields} dengan pesan kesalahan ${error.message}`)
+        }else {
+            console.error(error.message)
+        }
+
+    }
+
+    console.info('Rahman')
+</script>
+</body>
+</html>

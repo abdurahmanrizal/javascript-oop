@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class: Instance Of</title>
+</head>
+<body>
+<script>
+    class Employee{
+
+    }
+
+    class Manager extends Employee{
+
+    }
+
+    // if we can output boolean for checking this variable what of object instance, we can use instanceof
+    const budi = new Employee()
+    const jack = new Manager()
+    console.info(budi instanceof Employee)
+    console.info(budi instanceof Manager)
+
+    console.info(jack instanceof Employee)
+    console.info(jack instanceof Manager)
+</script>
+</body>
+</html>

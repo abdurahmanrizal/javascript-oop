@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getter Setter Class </title>
+</head>
+<body>
+<script>
+    class Person {
+        constructor(firstName, lastName) {
+            this.firstName = firstName
+            this.lastName = lastName
+        }
+
+        get fullName() {
+            return `Hi, I'm ${this.firstName} ${this.lastName}`
+        }
+
+        set fullName(value) {
+            const result = value.split(' ')
+            this.firstName = result[0]
+            this.lastName = result[1]
+        }
+    }
+
+    const abdurahman = new Person('Abdurahman', 'Argoebie')
+    console.info(abdurahman.fullName)
+    abdurahman.fullName = 'Jack Komboy'
+    console.info(abdurahman)
+
+</script>
+</body>
+</html>

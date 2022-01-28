@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class: Private Method</title>
+</head>
+<body>
+<script>
+    class Person{
+        say(name) {
+            if(name) {
+                console.info(this.#sayWithName(name))
+            }else {
+                console.info(this.#sayWithoutName())
+            }
+        }
+
+        #sayWithName(name) {
+
+            return `Hello my name ${name} is exists`
+        }
+
+        #sayWithoutName() {
+            return `Hello name isnt exists`
+        }
+    }
+
+    const abdurahman = new Person()
+    abdurahman.say()
+
+
+</script>
+</body>
+</html>
